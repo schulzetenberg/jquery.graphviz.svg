@@ -31,7 +31,7 @@ Then init the node as a Graphviz object:
 ```
 $(document).ready(function(){
     $("#graph").graphviz({
-        url: "demo.svg", 
+        url: "demo.svg",
         ready: function() {
             var gv = this
         }
@@ -43,7 +43,8 @@ Depending on the options passed this will load, adopt and setup the Graphviz gen
 
 Options:
 * __url__: if present the url to fetch the svg from
-* __svg__: raw SVG (xml) data to adopt 
+* __svg__: raw SVG (xml) data to adopt
+* __svgString__: SVG (string) data to adopt
 * __shrink__: the amount to shrink nodes by; this gives a nice gap between nodes and edges.  Default '0.125pt'
 * __tooltips__: object containing callbacks for `init`, `show`, `hide` and `update`.  Default implementation uses bootstrap
 * __zoom__: enable shift-scroll zoom.  Default true
@@ -80,7 +81,7 @@ Show/hide tooltips on the SOM elements in the `$elements` set
 
 `GraphvizSvg.bringToFront($elements)`
 Brings the DOM elements in the jQuery set to the front
-  
+
 `GraphvizSvg.sendToBack($elements)`
 Sends the DOM elements in the jQuery set to the back
 

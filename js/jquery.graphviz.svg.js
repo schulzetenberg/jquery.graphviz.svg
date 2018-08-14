@@ -115,6 +115,11 @@
     } else {
       if (options.svg) {
         this.$element.html(options.svg)
+      } else if (options.svgString) {
+        var parser = new DOMParser()
+        var doc = parser.parseFromString(options.svgString, "image/svg+xml")
+        var svg = $("svg", doc)
+        this.$element.html(document.adoptNode(svg[0]))
       }
       this.setup()
     }
